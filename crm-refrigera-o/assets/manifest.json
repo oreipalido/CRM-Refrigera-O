@@ -1,0 +1,63 @@
+{
+    "name": "LSS Frios",
+    "short_name": "LSS Frios",
+    "description": "Sistema de gestão de serviços de refrigeração — clientes, agendamentos, orçamentos e assistência técnica.",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#ffffff",
+    "theme_color": "#2271b1",
+    "lang": "pt-PT",
+    "dir": "ltr",
+    "categories": ["business", "productivity", "utilities"],
+    "icons": [
+        {
+            "src": "icon-192.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "icon-512.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "icon-192.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icon-512.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Painel",
+            "short_name": "Painel",
+            "description": "Abrir o painel de controlo do CRM",
+            "url": "/wp-admin/admin.php?page=rc-crm",
+            "icons": [{ "src": "icon-192.svg", "sizes": "192x192", "type": "image/svg+xml" }]
+        },
+        {
+            "name": "Calendário",
+            "short_name": "Calendário",
+            "description": "Ver agendamentos do mês",
+            "url": "/wp-admin/admin.php?page=rc-crm-calendario",
+            "icons": [{ "src": "icon-192.svg", "sizes": "192x192", "type": "image/svg+xml" }]
+        },
+        {
+            "name": "Clientes",
+            "short_name": "Clientes",
+            "description": "Lista de clientes",
+            "url": "/wp-admin/admin.php?page=rc-crm-clientes",
+            "icons": [{ "src": "icon-192.svg", "sizes": "192x192", "type": "image/svg+xml" }]
+        }
+    ]
+}

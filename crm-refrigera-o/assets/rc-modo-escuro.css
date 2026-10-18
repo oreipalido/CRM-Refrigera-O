@@ -1,0 +1,464 @@
+/* Refrigeração CRM — Modo Escuro
+   Aplicado quando body tem a classe .rc-dark-mode
+   v3.7.1 */
+
+body.rc-dark-mode {
+    --rc-bg:           #1e1e1e;
+    --rc-bg-alt:       #2c2c2c;
+    --rc-bg-card:      #2c2c2c;
+    --rc-bg-input:     #1a1a1a;
+    --rc-bg-hover:     #3a3a3a;
+    --rc-border:       #444;
+    --rc-border-light: #3a3a3a;
+    --rc-text:         #e0e0e0;
+    --rc-text-strong:  #ffffff;
+    --rc-text-muted:   #a0a0a0;
+    --rc-link:         #72aee6;
+    --rc-link-hover:   #a5c9e8;
+    --rc-azul:         #72aee6;
+    --rc-azul-hover:   #4a8fd4;
+    --rc-vermelho:     #e65054;
+    --rc-verde:        #4ab866;
+    --rc-laranja:      #f0b849;
+    --rc-roxo:         #9b6ee6;
+}
+
+/* Fundo geral */
+body.rc-dark-mode,
+body.rc-dark-mode #wpcontent,
+body.rc-dark-mode #wpbody-content,
+body.rc-dark-mode .wrap {
+    background: var(--rc-bg);
+    color: var(--rc-text);
+}
+
+body.rc-dark-mode h1,
+body.rc-dark-mode h2,
+body.rc-dark-mode h3,
+body.rc-dark-mode h4 { color: var(--rc-text-strong); }
+
+body.rc-dark-mode .description,
+body.rc-dark-mode .rc-dash-tec-sub,
+body.rc-dark-mode .rc-itens-info { color: var(--rc-text-muted); }
+
+body.rc-dark-mode a { color: var(--rc-link); }
+body.rc-dark-mode a:hover { color: var(--rc-link-hover); }
+
+/* Menu lateral */
+body.rc-dark-mode #adminmenu,
+body.rc-dark-mode #adminmenuwrap,
+body.rc-dark-mode #adminmenuback { background: #1a1a1a; }
+body.rc-dark-mode #adminmenu a { color: #d0d0d0; }
+body.rc-dark-mode #adminmenu li.menu-top:hover,
+body.rc-dark-mode #adminmenu li.opensub > a.menu-top { background: var(--rc-bg-alt); }
+body.rc-dark-mode #adminmenu li.current a.menu-top,
+body.rc-dark-mode #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+    background: #1877F2;
+}
+
+/* Barra de topo */
+body.rc-dark-mode #wpadminbar { background: #1a1a1a; }
+body.rc-dark-mode #wpadminbar .ab-item,
+body.rc-dark-mode #wpadminbar a.ab-item { color: #d0d0d0; }
+body.rc-dark-mode #wpadminbar .ab-item:hover,
+body.rc-dark-mode #wpadminbar a.ab-item:hover { color: var(--rc-link); }
+
+/* Tabelas */
+body.rc-dark-mode .wp-list-table,
+body.rc-dark-mode .widefat,
+body.rc-dark-mode .striped {
+    background: var(--rc-bg-card);
+    border-color: var(--rc-border);
+}
+body.rc-dark-mode .wp-list-table thead th,
+body.rc-dark-mode .wp-list-table thead td,
+body.rc-dark-mode .widefat thead th {
+    background: var(--rc-bg-alt);
+    color: var(--rc-text-strong);
+    border-bottom-color: var(--rc-border);
+}
+body.rc-dark-mode .wp-list-table tbody td,
+body.rc-dark-mode .wp-list-table tbody th {
+    color: var(--rc-text);
+    border-bottom-color: var(--rc-border-light);
+}
+body.rc-dark-mode .wp-list-table.striped > tbody > :nth-child(odd) { background: #262626; }
+body.rc-dark-mode .wp-list-table tr:hover td { background: var(--rc-bg-hover) !important; }
+body.rc-dark-mode .wp-list-table tfoot th,
+body.rc-dark-mode .wp-list-table tfoot td {
+    background: var(--rc-bg-alt);
+    color: var(--rc-text);
+}
+
+/* Catch-all: divs com background inline branco */
+body.rc-dark-mode .wrap > div[style*="background:#fff"],
+body.rc-dark-mode .wrap > div[style*="background: #fff"],
+body.rc-dark-mode .wrap > div[style*="background:#ffffff"],
+body.rc-dark-mode .wrap > div[style*="background: #ffffff"],
+body.rc-dark-mode .wrap > div[style*="background:#f9f9f9"],
+body.rc-dark-mode .wrap > div[style*="background: #f9f9f9"],
+body.rc-dark-mode .wrap > div[style*="background:#fff9e5"],
+body.rc-dark-mode .wrap > div[style*="background: #fff9e5"],
+body.rc-dark-mode .wrap > div[style*="background:#f5f5f5"],
+body.rc-dark-mode .wrap > div[style*="background: #f5f5f5"] {
+    background: var(--rc-bg-card) !important;
+    color: var(--rc-text) !important;
+    border-color: var(--rc-border) !important;
+}
+body.rc-dark-mode .wrap > div[style*="background:#fff"] h3,
+body.rc-dark-mode .wrap > div[style*="background: #fff"] h3,
+body.rc-dark-mode .wrap > div[style*="background:#f9f9f9"] h3,
+body.rc-dark-mode .wrap > div[style*="background: #f9f9f9"] h3 {
+    color: var(--rc-text-strong) !important;
+}
+body.rc-dark-mode .wrap > div[style*="background:#fff"] p,
+body.rc-dark-mode .wrap > div[style*="background: #fff"] p,
+body.rc-dark-mode .wrap > div[style*="background:#f9f9f9"] p,
+body.rc-dark-mode .wrap > div[style*="background: #f9f9f9"] p,
+body.rc-dark-mode .wrap > div[style*="background:#fff"] li,
+body.rc-dark-mode .wrap > div[style*="background: #fff"] li,
+body.rc-dark-mode .wrap > div[style*="background:#f9f9f9"] li,
+body.rc-dark-mode .wrap > div[style*="background: #f9f9f9"] li {
+    color: var(--rc-text) !important;
+}
+body.rc-dark-mode .wrap > div[style*="background:#fff"] code,
+body.rc-dark-mode .wrap > div[style*="background: #fff"] code,
+body.rc-dark-mode .wrap > div[style*="background:#f9f9f9"] code,
+body.rc-dark-mode .wrap > div[style*="background: #f9f9f9"] code {
+    background: #3a3a3a !important;
+    color: #f0b849 !important;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Cards e secções */
+body.rc-dark-mode .rc-dash-card,
+body.rc-dark-mode .rc-dash-seccao,
+body.rc-dark-mode .rc-rel-card,
+body.rc-dark-mode .rc-rel-seccao,
+body.rc-dark-mode .rc-com-card,
+body.rc-dark-mode .rc-com-tec,
+body.rc-dark-mode .rc-servico-card,
+body.rc-dark-mode .rc-card,
+body.rc-dark-mode .rc-pg-seccao,
+body.rc-dark-mode .rc-pg-search-box,
+body.rc-dark-mode .rc-pg-resultados-info,
+body.rc-dark-mode .rc-itens-wrapper,
+body.rc-dark-mode .rc-itens-tabela,
+body.rc-dark-mode .rc-stat,
+body.rc-dark-mode .rc-crm-form {
+    background: var(--rc-bg-card) !important;
+    border-color: var(--rc-border) !important;
+    color: var(--rc-text);
+}
+body.rc-dark-mode .rc-dash-seccao h2,
+body.rc-dark-mode .rc-rel-seccao h2,
+body.rc-dark-mode .rc-itens-header h3 {
+    color: var(--rc-text-strong);
+    border-bottom-color: var(--rc-border-light);
+}
+body.rc-dark-mode .rc-dash-lista li,
+body.rc-dark-mode .rc-pg-item { border-bottom-color: var(--rc-border-light); }
+body.rc-dark-mode .rc-dash-lista .rc-info strong,
+body.rc-dark-mode .rc-pg-item-titulo,
+body.rc-dark-mode .rc-servico-cliente,
+body.rc-dark-mode .rc-card-nome { color: var(--rc-text-strong); }
+body.rc-dark-mode .rc-dash-lista .rc-info small,
+body.rc-dark-mode .rc-pg-item-meta,
+body.rc-dark-mode .rc-servico-info,
+body.rc-dark-mode .rc-card-info { color: var(--rc-text-muted); }
+
+/* AÇÕES RÁPIDAS — texto branco */
+body.rc-dark-mode .rc-dash-acoes a,
+body.rc-dark-mode .rc-dash-acoes a:hover,
+body.rc-dark-mode .rc-dash-acoes a:focus,
+body.rc-dark-mode .rc-dash-acoes a:active,
+body.rc-dark-mode .rc-pg-item-acoes a,
+body.rc-dark-mode .rc-modal-acoes a,
+body.rc-dark-mode .rc-servico-card-acoes a,
+body.rc-dark-mode .rc-card-acoes a,
+body.rc-dark-mode .rc-cal-modal-item-acoes a {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Inputs */
+body.rc-dark-mode input[type="text"],
+body.rc-dark-mode input[type="email"],
+body.rc-dark-mode input[type="tel"],
+body.rc-dark-mode input[type="number"],
+body.rc-dark-mode input[type="date"],
+body.rc-dark-mode input[type="datetime-local"],
+body.rc-dark-mode input[type="month"],
+body.rc-dark-mode input[type="search"],
+body.rc-dark-mode input[type="password"],
+body.rc-dark-mode textarea,
+body.rc-dark-mode select {
+    background: var(--rc-bg-input);
+    color: var(--rc-text);
+    border-color: var(--rc-border);
+}
+body.rc-dark-mode input:focus,
+body.rc-dark-mode textarea:focus,
+body.rc-dark-mode select:focus {
+    border-color: var(--rc-link);
+    box-shadow: 0 0 0 3px rgba(114,174,230,0.15);
+}
+body.rc-dark-mode input::placeholder,
+body.rc-dark-mode textarea::placeholder { color: #666; }
+
+/* Botões */
+body.rc-dark-mode .button,
+body.rc-dark-mode .button-secondary {
+    background: var(--rc-bg-hover);
+    color: var(--rc-text);
+    border-color: var(--rc-border);
+}
+body.rc-dark-mode .button:hover { background: #4a4a4a; color: var(--rc-text-strong); }
+body.rc-dark-mode .button-primary { background: #1877F2; color: #fff; border-color: #1877F2; }
+body.rc-dark-mode .button-primary:hover { background: #0C63D4; border-color: #0C63D4; }
+
+/* Notices */
+body.rc-dark-mode .notice,
+body.rc-dark-mode .notice-success,
+body.rc-dark-mode .notice-error,
+body.rc-dark-mode .notice-warning,
+body.rc-dark-mode .notice-info {
+    background: var(--rc-bg-alt);
+    color: var(--rc-text);
+}
+body.rc-dark-mode .notice p { color: var(--rc-text); }
+
+/* Formulários admin */
+body.rc-dark-mode .form-table th,
+body.rc-dark-mode .form-table td {
+    color: var(--rc-text);
+    border-bottom-color: var(--rc-border-light);
+}
+body.rc-dark-mode .form-table th label { color: var(--rc-text-strong); }
+
+/* Modais */
+body.rc-dark-mode .rc-modal,
+body.rc-dark-mode .rc-cal-modal {
+    background: var(--rc-bg-card);
+    color: var(--rc-text);
+}
+body.rc-dark-mode .rc-modal h2,
+body.rc-dark-mode .rc-cal-modal h2 { color: var(--rc-text-strong); }
+body.rc-dark-mode .rc-modal-linha { border-bottom-color: var(--rc-border-light); }
+body.rc-dark-mode .rc-modal-linha strong { color: var(--rc-text-strong); }
+body.rc-dark-mode .rc-modal-linha span   { color: var(--rc-text); }
+body.rc-dark-mode .rc-servico-item       { background: var(--rc-bg-alt); }
+
+/* Calendário */
+body.rc-dark-mode .rc-cal-grid,
+body.rc-dark-mode .rc-cal-filtros,
+body.rc-dark-mode .rc-cal-nav a {
+    background: var(--rc-bg-card);
+    border-color: var(--rc-border);
+    color: var(--rc-text);
+}
+body.rc-dark-mode .rc-cal-dia {
+    background: var(--rc-bg-card);
+    border-right-color: var(--rc-border-light);
+    border-bottom-color: var(--rc-border-light);
+    color: var(--rc-text);
+}
+body.rc-dark-mode .rc-cal-dia:hover    { background: var(--rc-bg-hover); }
+body.rc-dark-mode .rc-cal-dia.fora     { background: #262626; color: #555; }
+body.rc-dark-mode .rc-cal-dia.hoje     { background: #3a2f0a; }
+body.rc-dark-mode .rc-cal-dia .numero-dia { color: var(--rc-text); }
+body.rc-dark-mode .rc-cal-modal-item   { background: var(--rc-bg-alt); }
+body.rc-dark-mode .rc-cal-modal-item-cliente { color: var(--rc-text-strong); }
+body.rc-dark-mode .rc-cal-modal-item-equip   { color: var(--rc-text-muted); }
+
+/* Itens do orçamento */
+body.rc-dark-mode .rc-itens-cabecalho {
+    background: var(--rc-bg-alt);
+    color: var(--rc-text-muted);
+    border-bottom-color: var(--rc-border);
+}
+body.rc-dark-mode .rc-item-linha       { border-bottom-color: var(--rc-border-light); }
+body.rc-dark-mode .rc-item-linha:hover { background: #262626; }
+body.rc-dark-mode .rc-totais-wrapper   { border-top-color: var(--rc-border); }
+body.rc-dark-mode .rc-totais-linha     { color: var(--rc-text); }
+
+/* Etiquetas */
+body.rc-dark-mode .rc-tag-checkbox {
+    background: var(--rc-bg-alt);
+    border-color: var(--rc-border);
+}
+body.rc-dark-mode .rc-tag-checkbox:hover       { background: var(--rc-bg-hover); }
+body.rc-dark-mode .rc-tag-checkbox.selecionado { background: #2f3439; }
+
+/* Comissões */
+body.rc-dark-mode .rc-com-tec .nome  { color: var(--rc-text-strong); }
+body.rc-dark-mode .rc-com-tec .linha { color: var(--rc-text); }
+
+/* Tabelas de relatórios */
+body.rc-dark-mode .rc-tabela-rel th {
+    background: var(--rc-bg-alt);
+    color: var(--rc-text-muted);
+    border-bottom-color: var(--rc-border);
+}
+body.rc-dark-mode .rc-tabela-rel td {
+    color: var(--rc-text);
+    border-bottom-color: var(--rc-border-light);
+}
+body.rc-dark-mode .rc-tabela-rel tr:hover td { background: #262626; }
+
+/* Gráfico */
+body.rc-dark-mode .rc-grafico-barras { border-bottom-color: var(--rc-border); }
+body.rc-dark-mode .rc-barra-label    { color: var(--rc-text-muted); }
+
+/* Paginação */
+body.rc-dark-mode .rc-paginacao a,
+body.rc-dark-mode .tablenav-pages a {
+    background: var(--rc-bg-hover);
+    color: var(--rc-text);
+}
+body.rc-dark-mode .rc-paginacao .rc-atual { background: #1877F2; color: #fff; }
+
+/* Área do cliente */
+body.rc-dark-mode .rc-ac-login-aviso,
+body.rc-dark-mode .rc-ac-form,
+body.rc-dark-mode .rc-ac-servico { background: var(--rc-bg-card); color: var(--rc-text); }
+body.rc-dark-mode .rc-ac-tab { background: var(--rc-bg-alt); color: var(--rc-text); }
+body.rc-dark-mode .rc-ac-tab:hover { background: var(--rc-bg-hover); }
+body.rc-dark-mode .rc-ac-tab.ativa { background: #1877F2; color: #fff; }
+body.rc-dark-mode .rc-ac-form label { color: var(--rc-text-strong); }
+body.rc-dark-mode .rc-ac-form input,
+body.rc-dark-mode .rc-ac-form textarea {
+    background: var(--rc-bg-input);
+    color: var(--rc-text);
+    border-color: var(--rc-border);
+}
+body.rc-dark-mode .rc-ac-vazio      { background: var(--rc-bg-alt); color: var(--rc-text-muted); }
+body.rc-dark-mode .rc-ac-topo       { border-bottom-color: #1877F2; }
+body.rc-dark-mode .rc-ac-servico-topo { border-bottom-color: var(--rc-border-light); }
+
+/* Botão sair — painel do técnico */
+body.rc-dark-mode .rc-dash-tec-sair {
+    background: var(--rc-bg-hover);
+    color: var(--rc-text) !important;
+}
+body.rc-dark-mode .rc-dash-tec-sair:hover {
+    background: var(--rc-vermelho);
+    color: #ffffff !important;
+}
+body.rc-dark-mode .rc-painel-topo h1 {
+    color: var(--rc-text-strong);
+}
+
+/* ============================================================
+   BARRA DE NAVEGAÇÃO ([rc_nav]) — modo escuro
+   ============================================================ */
+body.rc-dark-mode .rc-nav {
+    background: var(--rc-bg-card);
+    border-color: var(--rc-border);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+body.rc-dark-mode .rc-nav-btn { color: var(--rc-text); }
+body.rc-dark-mode .rc-nav-btn:hover {
+    background: rgba(114, 174, 230, 0.15);
+    color: var(--rc-link);
+    border-color: var(--rc-link);
+}
+body.rc-dark-mode .rc-nav-btn-ativo {
+    background: #1877F2;
+    color: #fff !important;
+    border-color: #1877F2;
+}
+body.rc-dark-mode .rc-nav-dark {
+    background: var(--rc-bg-hover);
+    border-color: var(--rc-border);
+    color: var(--rc-text);
+}
+body.rc-dark-mode .rc-nav-dark:hover {
+    background: var(--rc-link);
+    color: #fff !important;
+    border-color: var(--rc-link);
+}
+body.rc-dark-mode .rc-nav-sair {
+    background: var(--rc-vermelho);
+    color: #fff !important;
+    border-color: var(--rc-vermelho);
+}
+body.rc-dark-mode .rc-nav-sair:hover {
+    background: #c44;
+    border-color: #c44;
+}
+
+/* ============================================================
+   HOMEPAGE ([rc_inicio]) — modo escuro
+   ============================================================ */
+body.rc-dark-mode .rc-inicio-btn {
+    background: var(--rc-bg-card);
+    border-color: var(--rc-border);
+    color: var(--rc-text);
+}
+body.rc-dark-mode .rc-inicio-btn-texto strong { color: var(--rc-text-strong); }
+body.rc-dark-mode .rc-inicio-btn-texto small  { color: var(--rc-text-muted); }
+
+body.rc-dark-mode .rc-inicio-servico {
+    background: var(--rc-bg-alt);
+}
+body.rc-dark-mode .rc-inicio-servico:hover {
+    background: var(--rc-bg-card);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+body.rc-dark-mode .rc-inicio-servico h3 { color: var(--rc-text-strong); }
+body.rc-dark-mode .rc-inicio-servico p  { color: var(--rc-text-muted); }
+
+body.rc-dark-mode .rc-inicio-servicos h2,
+body.rc-dark-mode .rc-inicio-contactos h2 { color: var(--rc-text-strong); }
+
+body.rc-dark-mode .rc-inicio-rodape {
+    color: var(--rc-text-muted);
+    border-top-color: var(--rc-border);
+}
+
+body.rc-dark-mode .rc-inicio-btn-seta { color: #555; }
+body.rc-dark-mode .rc-inicio-btn:hover .rc-inicio-btn-seta { color: var(--rc-link); }
+
+/* ============================================================
+   BOTÃO TOGGLE FLUTUANTE (legado — escondido por CSS no frontend)
+   ============================================================ */
+#rc-dark-mode-toggle {
+    position: fixed;
+    top: 42px;
+    right: 20px;
+    z-index: 999999;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+}
+#rc-dark-mode-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+body.rc-dark-mode #rc-dark-mode-toggle {
+    background: var(--rc-bg-card);
+    border-color: var(--rc-border);
+    color: #ffffff;
+}
+@media (max-width: 782px) {
+    #rc-dark-mode-toggle {
+        top: 46px;
+        right: 10px;
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+}

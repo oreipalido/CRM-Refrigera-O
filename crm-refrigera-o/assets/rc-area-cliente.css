@@ -1,0 +1,266 @@
+/* Refrigeração CRM — Área do Cliente (azul Facebook + vermelho sangue) */
+
+:root {
+    --rc-azul:          #1877F2;
+    --rc-azul-hover:    #0C63D4;
+    --rc-azul-light:    #E7F0FD;
+    --rc-vermelho:      #b32d2e;
+    --rc-vermelho-hover:#8f1f20;
+    --rc-vermelho-light:#FFF5F5;
+    --rc-verde:         #00a32a;
+    --rc-roxo:          #7c3aed;
+    --rc-texto:         #1a1a1a;
+    --rc-texto-2:       #666;
+    --rc-texto-3:       #999;
+    --rc-borda:         #ddd;
+    --rc-borda-suave:   #f0f2f5;
+    --rc-fundo:         #fff;
+    --rc-fundo-suave:   #f9f9f9;
+    --rc-radius:        8px;
+    --rc-radius-lg:     12px;
+}
+
+.rc-ac {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Login */
+.rc-ac-login-aviso {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 40px;
+    background: var(--rc-fundo);
+    border-radius: var(--rc-radius-lg);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.rc-ac-login-aviso h2 { margin-top: 0; color: var(--rc-texto); }
+.rc-ac-login-aviso p  { color: var(--rc-texto-2); }
+
+.rc-ac-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: var(--rc-azul);
+    color: #fff !important;
+    border-radius: var(--rc-radius);
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+.rc-ac-btn:hover { background: var(--rc-azul-hover); }
+
+/* Topo */
+.rc-ac-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--rc-azul);
+}
+.rc-ac-topo h1 { margin: 0 0 6px; font-size: 26px; color: var(--rc-texto); }
+.rc-ac-sub    { margin: 0; color: var(--rc-texto-2); font-size: 14px; }
+
+.rc-ac-btn-sair {
+    display: inline-block;
+    padding: 10px 18px;
+    background: var(--rc-fundo-suave);
+    color: #333 !important;
+    border-radius: var(--rc-radius);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+.rc-ac-btn-sair:hover { background: #e0e0e0; }
+
+/* Mensagens */
+.rc-ac-mensagem {
+    padding: 16px 20px;
+    border-radius: var(--rc-radius);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.rc-ac-mensagem.sucesso {
+    background: #d4edda;
+    color: #155724;
+    border-left: 4px solid var(--rc-verde);
+}
+.rc-ac-mensagem.erro {
+    background: var(--rc-vermelho-light);
+    color: var(--rc-vermelho);
+    border-left: 4px solid var(--rc-vermelho);
+}
+
+/* Tabs */
+.rc-ac-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.rc-ac-tab {
+    padding: 12px 20px;
+    border: none;
+    background: var(--rc-fundo-suave);
+    color: #333;
+    border-radius: var(--rc-radius) var(--rc-radius) 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.rc-ac-tab:hover { background: #e0e0e0; }
+.rc-ac-tab.ativa { background: var(--rc-azul); color: #fff; }
+
+.rc-ac-tab-conteudo          { display: none; }
+.rc-ac-tab-conteudo.ativa    { display: block; }
+
+.rc-ac-vazio {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--rc-fundo-suave);
+    border-radius: var(--rc-radius-lg);
+    color: var(--rc-texto-2);
+}
+
+/* Cartão de serviço */
+.rc-ac-servico {
+    background: var(--rc-fundo);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-left: 4px solid var(--rc-azul);
+}
+.rc-ac-servico-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rc-borda-suave);
+}
+.rc-ac-servico-numero {
+    font-family: monospace;
+    font-weight: 700;
+    color: var(--rc-azul);
+    font-size: 15px;
+    margin-right: 10px;
+}
+.rc-ac-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.rc-ac-servico-data { color: var(--rc-texto-2); font-size: 13px; font-weight: 600; }
+.rc-ac-servico-corpo p { margin: 6px 0; color: #333; font-size: 14px; line-height: 1.6; }
+.rc-ac-servico-valor {
+    background: var(--rc-fundo-suave);
+    padding: 10px 14px;
+    border-radius: var(--rc-radius);
+    margin-top: 10px !important;
+}
+.rc-ac-servico-acoes { margin-top: 12px; }
+
+.rc-ac-btn-mini {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--rc-roxo);
+    color: #fff !important;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+.rc-ac-btn-mini:hover { opacity: 0.9; }
+
+/* Formulários */
+.rc-ac-form {
+    background: var(--rc-fundo);
+    padding: 24px;
+    border-radius: var(--rc-radius-lg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.rc-ac-form h2 { margin-top: 0; }
+.rc-ac-form label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin: 16px 0 6px;
+    font-size: 14px;
+}
+.rc-ac-form input[type="text"],
+.rc-ac-form input[type="tel"],
+.rc-ac-form input[type="email"],
+.rc-ac-form input[type="date"],
+.rc-ac-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--rc-borda);
+    border-radius: var(--rc-radius);
+    font-size: 15px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+.rc-ac-form input:focus,
+.rc-ac-form textarea:focus {
+    outline: none;
+    border-color: var(--rc-azul);
+    box-shadow: 0 0 0 3px rgba(24,119,242,0.15);
+}
+.rc-ac-form input:disabled { background: #f5f5f5; color: var(--rc-texto-3); }
+
+.rc-ac-form-linha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.rc-ac-btn-grande {
+    padding: 14px 32px;
+    background: var(--rc-azul);
+    color: #fff;
+    border: none;
+    border-radius: var(--rc-radius);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.rc-ac-btn-grande:hover { background: var(--rc-azul-hover); }
+
+.rc-ac-btn-perigo {
+    padding: 14px 32px;
+    background: var(--rc-vermelho);
+    color: #fff;
+    border: none;
+    border-radius: var(--rc-radius);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.rc-ac-btn-perigo:hover { background: var(--rc-vermelho-hover); }
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .rc-ac { padding: 12px; }
+    .rc-ac-form-linha { grid-template-columns: 1fr; }
+    .rc-ac-topo h1 { font-size: 20px; }
+    .rc-ac-tab { padding: 10px 14px; font-size: 13px; }
+}

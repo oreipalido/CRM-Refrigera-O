@@ -1,0 +1,357 @@
+/* Refrigeração CRM — Admin (azul Facebook + vermelho sangue) */
+
+:root {
+    --rc-azul:          #1877F2;
+    --rc-azul-hover:    #0C63D4;
+    --rc-azul-light:    #E7F0FD;
+    --rc-vermelho:      #b32d2e;
+    --rc-vermelho-hover:#8f1f20;
+    --rc-vermelho-light:#FFF5F5;
+    --rc-verde:         #00a32a;
+    --rc-laranja:       #dba617;
+    --rc-roxo:          #7c3aed;
+    --rc-texto:         #1a1a1a;
+    --rc-texto-2:       #666;
+    --rc-texto-3:       #999;
+    --rc-borda:         #ddd;
+    --rc-borda-suave:   #f0f2f5;
+    --rc-fundo:         #fff;
+    --rc-fundo-suave:   #f9f9f9;
+    --rc-radius:        8px;
+    --rc-radius-lg:     12px;
+}
+
+/* Formulários inline — grid 2 colunas */
+.rc-form-inline .rc-crm-form .rc-linha,
+.rc-crm-form.rc-form-modal .rc-linha {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+    margin-bottom: 20px !important;
+}
+.rc-form-inline .rc-crm-form .rc-linha.rc-full,
+.rc-crm-form.rc-form-modal .rc-linha.rc-full {
+    grid-template-columns: 1fr !important;
+}
+
+/* Floating label */
+.rc-form-inline .rc-campo,
+.rc-crm-form.rc-form-modal .rc-campo {
+    position: relative !important;
+    display: block !important;
+    margin: 0 !important;
+}
+.rc-form-inline .rc-campo input,
+.rc-form-inline .rc-campo select,
+.rc-form-inline .rc-campo textarea,
+.rc-crm-form.rc-form-modal .rc-campo input,
+.rc-crm-form.rc-form-modal .rc-campo select,
+.rc-crm-form.rc-form-modal .rc-campo textarea {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 20px 14px 8px !important;
+    height: auto !important;
+    min-height: 52px !important;
+    border: 1px solid var(--rc-borda) !important;
+    border-radius: var(--rc-radius) !important;
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    background: var(--rc-fundo) !important;
+    color: var(--rc-texto) !important;
+    -webkit-text-fill-color: var(--rc-texto) !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+}
+.rc-form-inline .rc-campo input:focus,
+.rc-form-inline .rc-campo select:focus,
+.rc-form-inline .rc-campo textarea:focus,
+.rc-crm-form.rc-form-modal .rc-campo input:focus,
+.rc-crm-form.rc-form-modal .rc-campo select:focus,
+.rc-crm-form.rc-form-modal .rc-campo textarea:focus {
+    border-color: var(--rc-azul) !important;
+    box-shadow: 0 0 0 3px rgba(24,119,242,0.15) !important;
+    outline: none !important;
+}
+.rc-form-inline .rc-campo label,
+.rc-crm-form.rc-form-modal .rc-campo label {
+    position: absolute !important;
+    left: 14px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: var(--rc-texto-3) !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    pointer-events: none !important;
+    transition: all 0.2s ease !important;
+    background: var(--rc-fundo) !important;
+    padding: 0 4px !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+}
+.rc-form-inline .rc-campo input:focus + label,
+.rc-form-inline .rc-campo input:not(:placeholder-shown) + label,
+.rc-form-inline .rc-campo textarea:focus + label,
+.rc-form-inline .rc-campo textarea:not(:placeholder-shown) + label,
+.rc-form-inline .rc-campo select + label,
+.rc-crm-form.rc-form-modal .rc-campo input:focus + label,
+.rc-crm-form.rc-form-modal .rc-campo input:not(:placeholder-shown) + label,
+.rc-crm-form.rc-form-modal .rc-campo textarea:focus + label,
+.rc-crm-form.rc-form-modal .rc-campo textarea:not(:placeholder-shown) + label,
+.rc-crm-form.rc-form-modal .rc-campo select + label {
+    top: 0 !important;
+    transform: translateY(-50%) !important;
+    font-size: 12px !important;
+    color: var(--rc-azul) !important;
+    font-weight: 600 !important;
+}
+.rc-form-inline .rc-campo textarea + label,
+.rc-crm-form.rc-form-modal .rc-campo textarea + label {
+    top: 22px !important;
+    transform: none !important;
+}
+
+/* Floating label — modo escuro */
+body.rc-dark-mode .rc-form-inline .rc-campo label,
+body.rc-dark-mode .rc-crm-form.rc-form-modal .rc-campo label {
+    background: #2c2c2c !important;
+    color: #a0a0a0 !important;
+}
+body.rc-dark-mode .rc-form-inline .rc-campo input:focus + label,
+body.rc-dark-mode .rc-form-inline .rc-campo input:not(:placeholder-shown) + label,
+body.rc-dark-mode .rc-form-inline .rc-campo textarea:focus + label,
+body.rc-dark-mode .rc-form-inline .rc-campo textarea:not(:placeholder-shown) + label,
+body.rc-dark-mode .rc-form-inline .rc-campo select + label {
+    color: #72aee6 !important;
+    background: #2c2c2c !important;
+}
+
+/* Botões primários */
+.rc-form-inline .button-primary,
+.rc-form-inline .submit button,
+.rc-crm-form .button-primary,
+.rc-crm-form .submit button {
+    background: var(--rc-azul) !important;
+    border-color: var(--rc-azul) !important;
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+}
+.rc-form-inline .button-primary:hover,
+.rc-form-inline .submit button:hover,
+.rc-crm-form .button-primary:hover,
+.rc-crm-form .submit button:hover {
+    background: var(--rc-azul-hover) !important;
+    border-color: var(--rc-azul-hover) !important;
+}
+
+/* Form inline */
+.rc-form-inline { max-width: 900px !important; }
+.rc-form-inline-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 12px !important;
+    border-bottom: 2px solid var(--rc-borda-suave) !important;
+}
+
+/* Atualizações */
+.rc-atualizacoes { max-width: 1100px; }
+.rc-update-estado {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+.rc-update-estado-item {
+    background: var(--rc-fundo);
+    border: 1px solid #e0e0e0;
+    border-radius: var(--rc-radius-lg);
+    padding: 18px;
+    border-left: 4px solid var(--rc-azul);
+}
+.rc-update-label {
+    font-size: 12px;
+    color: var(--rc-texto-2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+.rc-update-valor { font-size: 20px; font-weight: 700; color: var(--rc-texto); }
+.rc-update-valor.azul     { color: var(--rc-azul); }
+.rc-update-valor.verde    { color: var(--rc-verde); }
+.rc-update-valor.roxo     { color: var(--rc-roxo); }
+.rc-update-valor.laranja  { color: var(--rc-laranja); }
+.rc-update-valor.vermelho { color: var(--rc-vermelho); }
+
+/* Info box — CORRIGIDO PARA LEGIBILIDADE */
+.rc-update-info {
+    background: #fff9e5 !important;
+    border-left: 4px solid #dba617 !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin: 20px 0 !important;
+}
+
+.rc-update-info *,
+.rc-update-info p,
+.rc-update-info li,
+.rc-update-info ol,
+.rc-update-info ul,
+.rc-update-info span,
+.rc-update-info strong,
+.rc-update-info h3,
+.rc-update-info h4 {
+    color: #1a1a1a !important;
+    -webkit-text-fill-color: #1a1a1a !important;
+    opacity: 1 !important;
+}
+
+.rc-update-info h3 {
+    margin-top: 0 !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+.rc-update-info ol {
+    margin: 12px 0 !important;
+    padding-left: 24px !important;
+    line-height: 1.8 !important;
+    list-style: decimal !important;
+}
+
+.rc-update-info ol li {
+    color: #1a1a1a !important;
+    -webkit-text-fill-color: #1a1a1a !important;
+    font-weight: 500 !important;
+}
+
+.rc-update-info code {
+    background: #fff !important;
+    color: #b32d2e !important;
+    -webkit-text-fill-color: #b32d2e !important;
+    padding: 2px 8px !important;
+    border-radius: 4px !important;
+    font-family: Menlo, Consolas, monospace !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+.rc-update-acao {
+    background: var(--rc-fundo);
+    border: 1px solid #e0e0e0;
+    border-radius: var(--rc-radius-lg);
+    padding: 24px;
+    margin: 20px 0;
+}
+.rc-update-acao h2 {
+    margin-top: 0;
+    font-size: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rc-borda-suave);
+}
+.rc-update-acao .button-hero {
+    padding: 12px 32px !important;
+    height: auto !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+}
+
+/* Upload */
+.rc-update-upload {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: var(--rc-fundo-suave);
+    border: 2px dashed #ccc;
+    border-radius: var(--rc-radius);
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+.rc-update-upload input[type="file"] {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    border: 0 !important;
+}
+.rc-update-file-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--rc-azul);
+    color: #fff;
+    border-radius: var(--rc-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.rc-update-file-label:hover { background: var(--rc-azul-hover); }
+.rc-update-file-icon { font-size: 20px; }
+.rc-update-file-name {
+    font-size: 14px;
+    color: var(--rc-texto-3);
+    font-style: italic;
+}
+
+/* Configurações — abas */
+.rc-config-wrapper .rc-config-tabs {
+    margin: 16px 0 0;
+    border-bottom: 1px solid #c3c4c7;
+}
+.rc-config-wrapper .rc-config-tabs .nav-tab {
+    font-size: 14px;
+    padding: 10px 16px;
+    font-weight: 600;
+}
+.rc-config-wrapper .rc-config-tabs .nav-tab-active {
+    border-bottom-color: var(--rc-azul);
+    color: var(--rc-azul);
+}
+.rc-config-wrapper .rc-config-tab-content { background: transparent; padding: 0; }
+.rc-config-wrapper .rc-config-tab-content h2:first-of-type { margin-top: 24px; }
+
+/* Restaurar — aviso */
+.rc-config-wrapper .rc-restaurar-aviso {
+    background: var(--rc-vermelho-light);
+    border-left: 4px solid var(--rc-vermelho);
+    border-radius: var(--rc-radius);
+    padding: 20px;
+    margin: 24px 0;
+    max-width: 900px;
+}
+.rc-config-wrapper .rc-restaurar-aviso h3 {
+    color: var(--rc-vermelho);
+    font-size: 15px;
+}
+.rc-config-wrapper .rc-restaurar-aviso ul { margin: 8px 0 0; padding-left: 22px; }
+.rc-config-wrapper .rc-restaurar form .form-table { max-width: 900px; }
+
+/* ============================================================
+   MODO ESCURO — Info box de atualizações
+   ============================================================ */
+body.rc-dark-mode .rc-update-info {
+    background: #2c2c2c !important;
+    border-left-color: #dba617 !important;
+}
+
+body.rc-dark-mode .rc-update-info *,
+body.rc-dark-mode .rc-update-info p,
+body.rc-dark-mode .rc-update-info li,
+body.rc-dark-mode .rc-update-info span,
+body.rc-dark-mode .rc-update-info strong,
+body.rc-dark-mode .rc-update-info h3 {
+    color: #e0e0e0 !important;
+    -webkit-text-fill-color: #e0e0e0 !important;
+}
+
+body.rc-dark-mode .rc-update-info code {
+    background: #3a3a3a !important;
+    color: #f0b849 !important;
+    -webkit-text-fill-color: #f0b849 !important;
+}
